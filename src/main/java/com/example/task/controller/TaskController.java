@@ -1,7 +1,6 @@
 package com.example.task.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,9 +17,9 @@ public class TaskController {
 	* @return テンプレート
 	*/
 	@RequestMapping(value = "/task/", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
-		return "tasks/index";
+	public String index() {
+		System.out.println("タスク");
+		return "task/index";
 	}
 
 	/**
@@ -30,9 +29,9 @@ public class TaskController {
 	* @return テンプレート
 	*/
 	@RequestMapping(value = "/task/detail", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
-		return "tasks/detail";
+	public String detail() {
+
+		return "task/detail";
 	}
 
 	/**
@@ -41,10 +40,10 @@ public class TaskController {
 	* @param model モデル
 	* @return テンプレート
 	*/
-	@RequestMapping(value = "/task/new", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
-		return "tasks/new";
+	@RequestMapping(value = "/task/create", method = RequestMethod.GET)
+	public String create() {
+
+		return "task/create";
 	}
 
 	/**
@@ -54,8 +53,8 @@ public class TaskController {
 	* @return テンプレート
 	*/
 	@RequestMapping(value = "/task/edit/{id}", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
-		return "tasks/edit";
+	public String erit() {
+
+		return "task/edit";
 	}
 }

@@ -1,7 +1,6 @@
-package com.example.project.controller;
+package com.example.task.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,8 +17,8 @@ public class ProjectController {
 	* @return テンプレート
 	*/
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
+	public String index() {
+
 		return "projects/index";
 	}
 
@@ -30,8 +29,8 @@ public class ProjectController {
 	* @return テンプレート
 	*/
 	@RequestMapping(value = "/project/detail", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
+	public String detail() {
+
 		return "projects/detail";
 	}
 
@@ -41,10 +40,9 @@ public class ProjectController {
 	* @param model モデル
 	* @return テンプレート
 	*/
-	@RequestMapping(value = "/project/new", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
-		return "projects/new";
+	@RequestMapping(value = "/project/create", method = RequestMethod.GET)
+	public String create() {
+		return "projects/create";
 	}
 
 	/**
@@ -54,8 +52,7 @@ public class ProjectController {
 	* @return テンプレート
 	*/
 	@RequestMapping(value = "/project/edit/{id}", method = RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("form", PostFactory.newPost());
+	public String edit() {
 		return "projects/edit";
 	}
 }
