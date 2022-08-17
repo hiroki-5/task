@@ -19,7 +19,7 @@ public class ProjectController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
 
-		return "projects/index";
+		return "project/index";
 	}
 
 	/**
@@ -31,7 +31,7 @@ public class ProjectController {
 	@RequestMapping(value = "/project/detail", method = RequestMethod.GET)
 	public String detail() {
 
-		return "projects/detail";
+		return "project/detail";
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class ProjectController {
 	*/
 	@RequestMapping(value = "/project/create", method = RequestMethod.GET)
 	public String create() {
-		return "projects/create";
+		return "project/create";
 	}
 
 	/**
@@ -53,6 +53,6 @@ public class ProjectController {
 	*/
 	@RequestMapping(value = "/project/edit/{id}", method = RequestMethod.GET)
 	public String edit() {
-		return "projects/edit";
+		return "project/edit";
 	}
 }

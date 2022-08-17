@@ -18,7 +18,7 @@ public class TaskController {
 	*/
 	@RequestMapping(value = "/task/", method = RequestMethod.GET)
 	public String index() {
-		System.out.println("タスク");
+		System.out.println("１");
 		return "task/index";
 	}
 
