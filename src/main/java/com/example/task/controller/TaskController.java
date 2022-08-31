@@ -47,6 +47,18 @@ public class TaskController {
 	}
 
 	/**
+	* データの追加を表示する。
+	*
+	* @param model モデル
+	* @return テンプレート
+	*/
+	@RequestMapping(value = "/task/add", method = RequestMethod.POST)
+	public String add() {
+
+		return "redirect/index";
+	}
+
+	/**
 	* 編集　削除を表示する。
 	*
 	* @param model モデル
@@ -57,4 +69,29 @@ public class TaskController {
 
 		return "task/edit";
 	}
+
+	/**
+	* データの更新を表示する。
+	*
+	* @param model モデル
+	* @return テンプレート
+	*/
+	@RequestMapping(value = "/task/update/{id}", method = RequestMethod.POST)
+	public String update() {
+
+		return "redirect/index";
+	}
+
+	/**
+	* データの削除を表示する。
+	*
+	* @param model モデル
+	* @return テンプレート
+	*/
+	@RequestMapping(value = "/task/delete/{id}", method = RequestMethod.POST)
+	public String delete() {
+
+		return "redirect/index";
+	}
+
 }
