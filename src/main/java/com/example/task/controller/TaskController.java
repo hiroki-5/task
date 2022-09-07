@@ -18,7 +18,7 @@ public class TaskController {
 	*/
 	@RequestMapping(value = "/task/", method = RequestMethod.GET)
 	public String index() {
-		System.out.println("１");
+		
 		return "task/index";
 	}
 
@@ -47,19 +47,19 @@ public class TaskController {
 	}
 
 	/**
-	* データの追加を表示する。
+	* データの追加して一覧に表示する。
 	*
 	* @param model モデル
 	* @return テンプレート
 	*/
 	@RequestMapping(value = "/task/add", method = RequestMethod.POST)
 	public String add() {
-
+		System.out.println("１");
 		return "redirect/index";
 	}
 
 	/**
-	* 編集　削除を表示する。
+	* 編集を表示する。
 	*
 	* @param model モデル
 	* @return テンプレート
@@ -71,7 +71,7 @@ public class TaskController {
 	}
 
 	/**
-	* データの更新を表示する。
+	* データの更新して一覧に表示する。
 	*
 	* @param model モデル
 	* @return テンプレート
@@ -83,7 +83,7 @@ public class TaskController {
 	}
 
 	/**
-	* データの削除を表示する。
+	* データの削除して一覧に反映する。
 	*
 	* @param model モデル
 	* @return テンプレート

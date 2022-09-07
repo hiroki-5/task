@@ -46,7 +46,18 @@ public class ProjectController {
 	}
 
 	/**
-	* 編集　削除を表示する。
+	* データの追加して一覧に表示する。
+	*
+	* @param model モデル
+	* @return テンプレート
+	*/
+	@RequestMapping(value = "/project/add", method = RequestMethod.POST)
+	public String add() {
+		System.out.println("１");
+		return "redirect/project/index";
+	}
+	/**
+	* 編集を表示する。
 	*
 	* @param model モデル
 	* @return テンプレート
@@ -54,5 +65,29 @@ public class ProjectController {
 	@RequestMapping(value = "/project/edit/{id}", method = RequestMethod.GET)
 	public String edit() {
 		return "project/edit";
+	}
+
+	/**
+	* データの更新をして一覧に表示する。
+	*
+	* @param model モデル
+	* @return テンプレート
+	*/
+	@RequestMapping(value = "/project/update/{id}", method = RequestMethod.POST)
+	public String update() {
+
+		return "redirect/project/index";
+	}
+
+	/**
+	* データの削除をして一覧に反映する。
+	*
+	* @param model モデル
+	* @return テンプレート
+	*/
+	@RequestMapping(value = "/project/delete/{id}", method = RequestMethod.POST)
+	public String delete() {
+
+		return "redirect/project/index";
 	}
 }
