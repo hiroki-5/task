@@ -55,7 +55,7 @@ public class TaskController {
 	@RequestMapping(value = "/task/add", method = RequestMethod.POST)
 	public String add() {
 		System.out.println("１");
-		return "redirect/index";
+		return "redirect:/task/";
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class TaskController {
 	@RequestMapping(value = "/task/update/{id}", method = RequestMethod.POST)
 	public String update() {
 
-		return "redirect/index";
+		return "redirect:/task/";
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class TaskController {
 	@RequestMapping(value = "/task/delete/{id}", method = RequestMethod.POST)
 	public String delete() {
 
-		return "redirect/index";
+		return "redirect:/task/";
 	}
 
 }

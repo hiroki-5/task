@@ -1,27 +1,17 @@
 <!DOCTYPE html>
-<!--登録を押したらタスクをDBに追加して一覧表示に戻る-->
 <html>
 <head>
 <meta charset="UTF-8">
-<title>タスクの追加</title>
+<title>タスク追加</title>
 </head>
 <body>
-	<style>
-		h1{
-			text-align:center;
-		}
-		ol{
-			text-align:center;
-		}
-		
-	</style>
-	<h１>タスクを入力</h１>
-
+	<h1>タスク入力</h1>
 	<ol></ol>
-	<form action="/task/" method="post">
-		<input type="text">
+	<form action="/task/add" method="post">
+		<input type="text" name="name">
+		<button id="regist">登録</button>
 	</form>
 
-	<button id="touroku">登録</button>
+	
 </body>
 </html>

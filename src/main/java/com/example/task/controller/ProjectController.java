@@ -54,7 +54,7 @@ public class ProjectController {
 	@RequestMapping(value = "/project/add", method = RequestMethod.POST)
 	public String add() {
 		System.out.println("１");
-		return "redirect/project/index";
+		return "redirect:/";
 	}
 	/**
 	* 編集を表示する。
@@ -76,7 +76,7 @@ public class ProjectController {
 	@RequestMapping(value = "/project/update/{id}", method = RequestMethod.POST)
 	public String update() {
 
-		return "redirect/project/index";
+		return "redirect:/";
 	}
 
 	/**
@@ -88,6 +88,6 @@ public class ProjectController {
 	@RequestMapping(value = "/project/delete/{id}", method = RequestMethod.POST)
 	public String delete() {
 
-		return "redirect/project/index";
+		return "redirect:/";
 	}
 }
