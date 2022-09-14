@@ -46,7 +46,7 @@ public class ProjectController {
 	}
 
 	/**
-	* データの追加して一覧に表示する。
+	* データの追加してプロジェクト内を表示する。
 	*
 	* @param model モデル
 	* @return テンプレート
@@ -54,7 +54,7 @@ public class ProjectController {
 	@RequestMapping(value = "/project/add", method = RequestMethod.POST)
 	public String add() {
 		System.out.println("１");
-		return "redirect:/";
+		return "redirect:/task/";
 	}
 	/**
 	* 編集を表示する。

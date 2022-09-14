@@ -47,7 +47,7 @@ public class TaskController {
 	}
 
 	/**
-	* データの追加して一覧に表示する。
+	* データの追加してタスク一覧に表示する。
 	*
 	* @param model モデル
 	* @return テンプレート
